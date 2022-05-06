@@ -1,6 +1,5 @@
 {
     "window.zoomLevel": 2,
-    "files.autoSave": "afterDelay",
     "vscode-neovim.neovimExecutablePaths.linux": "/usr/local/bin/nvim",
     "workbench.colorTheme": "Dracula Soft",
     "workbench.preferredDarkColorTheme": "Dracula",
@@ -13,6 +12,10 @@
         "**/.project": true,
         "**/.settings": true,
         "**/.factorypath": true
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "redhat.telemetry.enabled": true,
     "window.menuBarVisibility": "toggle",
@@ -27,4 +30,10 @@
     "editor.letterSpacing": 1.2,
     "editor.lineHeight": 22,
     "editor.fontLigatures": true,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "files.autoSave": "afterDelay",
+    "editor.formatOnSave": true,
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }

@@ -1,11 +1,11 @@
 #ZSHCONFIG
 export ZSH="/home/epistelmoz/.oh-my-zsh"
-ZSH_THEME="juujitsu"
+ZSH_THEME="fukyuu"
 CASE_SENSITIVE="true"
 zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 COMPLETION_WAITING_DOTS="true"
 HIST_STAMPS="dd/mm/yyyy"
-plugins=(battery git colored-man-pages common-aliases emoji sudo zsh-interactive-cd)
+plugins=(battery git colored-man-pages common-aliases emoji sudo zsh-autosuggestions zsh-interactive-cd)
 source $ZSH/oh-my-zsh.sh
 
 #ALIASES
@@ -32,3 +32,7 @@ alias sd='shutdown now'
 
 #PROGRAMS
 neofetch
+
+#PATH
+export PATH=$PATH:~/bin
+export MALIN_ROOT=/home/epistelmoz/projects/malin
