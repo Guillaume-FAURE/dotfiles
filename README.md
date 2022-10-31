@@ -474,6 +474,21 @@ I created I program to make the manga downloaded this way portable to kobo and o
 
 ## Battery
 
-
+We will create the skeleton of our xorg configuration file with the command :
+```bash
+# Xorg :0 -configure
+# mv /root/xorg.conf.new /etc/X11/xorg.conf.d/xorg.conf
+```
+Laptop wiki arch page : https://wiki.archlinux.org/title/Laptop
+Then we will change it with vim:
+```bash
+# vim /etc/X11/xorg.conf.d/xorg.conf
+```
 To optimize the battery : https://wiki.archlinux.org/title/Tp-battery-mode 
+
+## TouchPad
+
+```bash
+# paru -S xf86-input-synaptics
+```
 

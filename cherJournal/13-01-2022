@@ -1,6 +1,0 @@
-Jeudi 13 Janvier 2022:
-
-J'ai pas fait grand chose ce matin, j'ai eu un problème avec dockerd et avec firefox, j'ai donc changer de navigateur pour chromium, c'est open-source, c'est simple, ca me va.
-Pour l'aprem, j'ai avancé sur le Rust, mon niveau de concentration est encore limité mais tranquille. J'ai regardé beaucoup de videos de Louis-san avec des japonais, c'était vraiment tres drole, j'ai un peu joué à hearthstone et baba is you aussi (j'ai fait une vod du coup).
-Le Rust m'intéresse de plus en plus, aprés il faut que je vois le webAssembly aprés.
-J'ai aussi décidé, si j'y arrive, de faire le programme pour Béa en full Rust, il sera performant et j'ai trouvé un crates qui permet de faire un OCR avec tesseract.
