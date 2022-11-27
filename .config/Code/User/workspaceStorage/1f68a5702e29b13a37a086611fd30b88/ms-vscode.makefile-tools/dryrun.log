@@ -1,0 +1,8 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/epistelmoz/projects/malin/src/parseXML'
+if ! test  ; then echo "you should give an input alto file, try  : \n ALTOFILE=monfichier.xml make ";exit 1;fi
+if ! test  -f ; then echo "it seems that ; does not exist ";exit 1;fi
+echo "default build sentences for: , keep textlines"
+node pipeline.js  sentences true
+make: Leaving directory '/home/epistelmoz/projects/malin/src/parseXML'
+ 

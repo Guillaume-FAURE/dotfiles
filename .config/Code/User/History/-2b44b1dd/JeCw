@@ -1,0 +1,5 @@
+node_modules
+tsBuildInfo
+!**/.gitkeep
+dist
+!dist/.gitkeep

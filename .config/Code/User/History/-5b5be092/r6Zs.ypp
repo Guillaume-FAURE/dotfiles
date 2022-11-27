@@ -1,0 +1,100 @@
+%{
+  #include <stdlib.h> /* Required to compile with C++ */
+  #include <stdio.h>
+  #include <ctype.h>
+  #include <math.h>
+  #include "global.h"
+  extern int yyparse(); /* Required to compile with C++ */
+  extern void yyerror(char*); /* Required to compile with C++ */
+  extern int yylex(void); /* Required to compile with C++ */
+  extern void updateSymbolValue(int variable_token , int value);
+  extern int getValue();
+%}
+
+
+
+%token DONE DIV MOD NUM ID
+%left '+' '-'
+%left '*' '/' '%'
+%right '^'
+%nonassoc '<' 
+
+
+%%
+
+line: /* EMPTY */
+  |line assignment '\n'
+  |line expr '\n'
+	;
+
+assignment: ID '=' comparison  { printf("%s = %d\n",symtable[$1].lexeme, $3); symtable[$1].value=$3; }
+  | comparison  { printf("%d\n", $1); } 
+  ;
+
+comparison: expr '<' expr {$$ = $1 < $3 ? 1 : 0;}
+  | expr '>' expr {$$ = $1 > $3 ? 1 : 0;}
+  | expr '&' expr {$$ = $1!=0 && $3!=0 ? 1 : 0;}
+  | expr '|' expr {$$ = $1!=0 || $3!=0 ? 1 : 0;}
+  | expr '?' expr ':' expr {$$ = $1!=0 ? $3 : $5; }
+  | expr
+  ;
+
+expr:	expr '+' term { $$ = $1 + $3; }
+  | expr '-' term { $$ = $1 - $3; }
+	| term
+	;
+
+term:	term '*' power { $$ = $1 * $3; }
+  |term '/' power { $$ = $1 / $3; }
+  | term '%' power { $$ = $1 % $3; }
+	| power
+	;
+
+power: power '^' factor { $$ = pow($1,$3); }
+  | factor
+  ;
+ 
+factor:	'(' expr ')' { $$ = $2; }
+	| NUM
+  | ID {$$ = symtable[$1].value; }
+	;
+
+%%
+
+int yylex(void) {
+
+  //printf("starting yylex function\n");
+  int token = lexan();
+
+  //printf("receive the token in yylex: %d\n",token);
+
+  if (token==NUM) {
+    yylval = token_value;
+    return NUM;
+  }
+
+  if(token==ID){
+    //printf("the token_value in yylex is %d\n",token_value);
+    //printf("the value of the variable is %d\n",symtable[token_value].value);
+    /* printf("we have the variable %s\n", symtable[token_value].lexeme); */
+    yylval=token_value;
+  }
+  return token;
+}
+
+
+void updateSymbolValue(int variable_token, int value){
+
+  printf("the variable token is %d and it should be %d\n",symtable[token_value].token_type , ID);
+  printf("the value is %d \n",value);
+
+}
+
+void yyerror(char *s) {
+  fprintf(stderr, "%s\n", s);
+}
+
+void parse(){
+  yyparse();
+}
+

@@ -1,0 +1,50 @@
+{
+	"workbench.colorTheme": "Visual Studio Dark - C++",
+	"files.autoSave": "afterDelay",
+	"editor.unicodeHighlight.ambiguousCharacters": false,
+	"editor.formatOnType": true,
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"editor.fontFamily": "'JetBrainsMono Nerd Font'",
+	"editor.fontSize": 15,
+	"prettier.tabWidth": 4,
+	"prettier.useTabs": true,
+	"editor.formatOnSave": true,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.formatOnPaste": true,
+	"extensionsGallery": {
+		"serviceUrl": "https://marketplace.visualstudio.com/_apis/public/gallery",
+		"cacheUrl": "https://vscode.blob.core.windows.net/gallery/index",
+		"itemUrl": "https://marketplace.visualstudio.com/items"
+	},
+	"sonarlint.ls.javaHome": "/home/epistelmoz/.vscode-oss/extensions/sonarsource.sonarlint_managed-jre/jre/jdk-11.0.15+10-jre",
+	"sonarlint.rules": {
+		"typescript:S4138": {
+			"level": "off"
+		},
+		"typescript:S1121": {
+			"level": "off"
+		},
+		"javascript:S1121": {
+			"level": "off"
+		},
+		"javascript:S4138": {
+			"level": "off"
+		},
+		"javascript:S4624": {
+			"level": "off"
+		},
+		"typescript:S2310": {
+			"level": "off"
+		}
+	},
+	"editor.wordWrap": "on",
+	"json.maxItemsComputed": 100000,
+	"editor.foldingMaximumRegions": 65000,
+	"editor.largeFileOptimizations": false,
+	"editor.fontLigatures": true,
+	"typescript.updateImportsOnFileMove.enabled": "always",
+	"workbench.iconTheme": "material-icon-theme",
+	"window.zoomLevel": 3
+}

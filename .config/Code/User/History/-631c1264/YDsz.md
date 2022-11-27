@@ -1,0 +1,18 @@
+# Part A: Bison and flex
+
+**Study the Makefile, Which commands used to build example are written explicitly in the file? Are there some commands that make will deduce by itself?**
+
+To build the example, the makefile use the gcc command that ask the example.tab that are created by the command bison that use example.y. The example command also ask the lex.yy files created with the flex command.
+
+**Which types of expressions does the calculator understand?**
+
+It understand PLUS, MINUS, STAR (that multiply).
+
+**One common operator is missing. Which one?**
+
+It miss the operator /
+
+## Part B: The calculator
+
+See code of 29
+

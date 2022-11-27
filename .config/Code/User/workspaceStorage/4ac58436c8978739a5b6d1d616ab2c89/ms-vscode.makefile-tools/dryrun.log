@@ -1,0 +1,13 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/epistelmoz/projects/compilerInterpreter/assignements/29'
+gcc -Wall -g -c stack.c
+gcc -Wall -g -c lexer.c
+gcc -Wall -g -c parser.c
+gcc -Wall -g -c emitter.c
+gcc -Wall -g -c symbol.c
+gcc -Wall -g -c init.c
+gcc -Wall -g -c error.c
+gcc -Wall -g -c main.c
+gcc -Wall -g -o infix2postfix stack.o lexer.o parser.o emitter.o symbol.o init.o error.o main.o  -lm
+make: Leaving directory '/home/epistelmoz/projects/compilerInterpreter/assignements/29'
+ 

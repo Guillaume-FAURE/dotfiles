@@ -1,0 +1,96 @@
+# Run-Time Environment
+
+```mermaid
+flowchart LR
+    S[Source]==>C[(Compile)]==>CC[Compile Code]==>L[(Linker)]==>EF[Executable File]
+```
+
+We will see the run-time of the executable file.
+
+Some terms:
+
+-   Function = Procedure = Method
+-   Function definition
+-   Function name
+-   Function body
+-   Function call
+-   Function parameters
+-   Function activation
+-   Actual parameters
+
+```C
+int /*return type*/ f /*function name*/ (int n) /*formal parameters*/
+{// Function body
+    int r;
+    if (n==1){
+        return 1;
+    }
+    else{
+        r=n*f(n-1);
+        return r;
+    }
+}
+
+int main(void){
+    int n=f(4);// Function activation
+    return 0;
+}
+```
+
+Activation record when the function is activated.
+The function f in the above code is recursive so in the **Call stack** it's called multiples times.
+Function called in order:
+
+-   main
+-   f(4)
+-   f(3)
+-   f(2)
+-   f(1)
+
+As recursive function, we go from the last function call to the first to have the actual value.
+This is simplified, in fact inside a function bloc there is a lot of information.
+
+Inside the call stack/control stack:
+
+-   Activation record
+-   Call by value
+-   Stack pointer
+-   Lifetime
+-   Scope
+-   Local/non-local
+-   Heap (malloc, new)
+
+## Address space
+
+-   Read-only part: Code, constant data, "text segment"
+-   Static data
+-   Stack (can be really large) or several stacks (for threads)
+-   Heap
+
+## Function block
+
+Inside a function block in the stack, there is the parameter the value in return but also:
+
+-   registers
+-   cpu state
+-   control link (pointing to other blocks)
+-   access link
+
+```C
+int a;
+void f(){
+    int a;
+    a=2;
+    g();
+}
+int g(){
+    a=3;
+}
+int main(){
+    int a=1;
+    g();
+    f();
+}
+```
+Which a is in the g funciton ?
+    The a in the g function has to be the global a declared in the beginning of the program.

@@ -1,0 +1,11 @@
+# Task 1
+
+7 phases of the compilers:
+1. Scanner : It will analyze the character of the code and transform them into tokens.
+   Characters ==> Tokens
+2. Parser : It will analyze the tokens and organize them in a syntax tree in function of the grammar.
+   Tokens ==> Syntax tree
+3. Semantic Analyser : It will analyze the datatype of all the tokens to verify there is no incoherence (float + string). It will add the datatype to the syntax tree
+    
+4. 
+

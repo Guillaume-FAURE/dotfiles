@@ -1,0 +1,111 @@
+# Course Literature: Distributed Systems
+
+## Trivia
+
+Exam: 3h, understanding, assessment critueria on blackboard
+website: https://www.distributed-systems.net
+
+## Basics for Distributed Systems:
+
+-   Computer communication & networks
+-   Data structures & algorithms
+-   Operating systems
+-   Realtime programming
+
+Nice-to-have:
+
+-   Database technologies
+-   Compilers & Interpreters
+-   Computer architectures
+
+## Definition:
+
+-   A distributed system is a collection of autonomous computing elements that appears to its users as a single coherent system.
+-   A distributed system is one in which components located at networked computers communicate and coordinate their actions only by passing messages.
+-   Distributed programming is the art of solving the same problem that you can solve on a single computer using multiple computers
+-   A distributed system is one in which the failure of a computer you didn't even know existed can render your own computer unusable.
+
+## Possible problems
+
+-   Scalability of our distributed system
+-   Correctness, the system is doing what it's censed to do
+
+Iot: teen tweets from her smart fridge (distributed systems with everything linked to the internet)
+
+Games are also distributed system, most demanding because a lot of people at the same time.
+
+## Beginning
+
+At beginning, each system have:
+Hardware ==> OS ==> Applications
+
+Yesterday, it was like:
+Hardware ==> OS ==> VMs ==> Applications
+
+Today:
+Hardwares ==> VM Monitor ==> OSs ==> VMs (Java, Corba) ==> Applications
+Scalable, failure resistant hardware, choice of OS properties
+
+## Overview of the topics
+
+See schema at slide 20
+
+## Learning Goals
+
+-   Ability to describe and explain important aspects of distributed systems
+-   Chose an appropriate design for problems involving distributed components
+-   Be aware of the pitfalls and challenges inherent to designing and operating distributed systems
+-   Get your hands dirty with some distributed systems programming
+
+## Autonomous nodes
+
+Independent behaviour and failures :
+
+-   individual notion of time
+-   synchronization and coordination needs
+
+Collection of nodes:
+
+-   Membership and communication in the colection
+-   open vs closed groups
+-   authentification of members and trust (security issues)
+
+## Ressource sharing
+
+Ressources (data) available on demand provided by specialists, instead of maintaining local infrastructure.
+Optimizing every systems.
+
+This sharing can be by:
+
+-   cloud storage
+-   P2P streams and torrent
+-   shared web hosting (content distribution/delivery networks) that can provide faster and more efficient access to the webpage
+
+## Distribution transparency
+
+Distributed systems should operate independent of:
+
+-   HW and OS specifics of nodes => Access transparency
+-   Physical location of nodes => (re)location and migration transparency
+-   Use of copies => Replication transparency
+-   Mulriple users per resource => Concurrency transparency
+-   Partial system failures => Failure transparency
+
+Full distribution transparency is not always possible to achieve, due to :
+
+-   Laws of physics => latencies of communication (often in multiplayer games, there is multiple servers)
+    (location and migration)
+-   Impossibility to distinguish a failing node from a slow node
+    (Failure)
+-   Performance costs
+    (Replication, concurrency)
+
+Distribution transparency might even not be desirable:
+
+-   Location-based services
+-   Users in different time zones
+-   Understanding system behaviour in partial system failures
+
+## Openness
+
+Open system: van be used by or integrated into other systems

@@ -1,0 +1,11 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/epistelmoz/projects/compilerInterpreter/assignements/assignement1-GettingStarted/partA'
+g++  -g  -c -o metamatic.o metamatic.cpp
+g++  -g  -c -o a.o a.cpp
+g++  -g  -c -o abc.o abc.cpp
+g++  -g  -c -o abscissa.o abscissa.cpp
+g++  -g  -c -o absurdum.o absurdum.cpp
+g++  -g  -c -o ack.o ack.cpp
+g++ -g metamatic.o a.o abc.o abscissa.o absurdum.o ack.o -o metamatic
+make: Leaving directory '/home/epistelmoz/projects/compilerInterpreter/assignements/assignement1-GettingStarted/partA'
+ 

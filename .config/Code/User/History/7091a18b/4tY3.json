@@ -1,0 +1,13 @@
+{
+	"exercice": {
+		"id": "p13_e10",
+		"consigne": " Relie chaque début de phrase avec la fin qui convient.",
+		"exemple": null,
+		"conseil": null,
+		"enonce": {
+			"txt": " Ces immeubles • • a 200 ans. Ce vieux chêne • • l’emmène voir un match. La directrice • • sont construits très hauts. La sœur d’Octave • • vole sans cesse autour de moi. Mon perroquet • • accueille les nouveaux élèves."
+		},
+		"reste": null
+	},
+	"type": "Associe"
+}

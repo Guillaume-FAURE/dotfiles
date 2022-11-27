@@ -1,0 +1,21 @@
+{
+	"exercice": {
+		"id": "p13_e8",
+		"consigne": " ì ì Remets ces mots dans l’ordre pour écrire des phrases. N’oublie pas les majuscules et les points.",
+		"exemple": null,
+		"conseil": null,
+		"enonce": {
+			"ol": {
+				"li": [
+					" a. la tortue – la salade – mange",
+					" b. vais – la semaine prochaine – je – chez – le dentiste",
+					" c. un bain – ma sœur – le soir – prend",
+					" d. la pie – ses oisillons – nourrit",
+					" e. skions – pendant les vacances – nous – à la montagne"
+				]
+			}
+		},
+		"reste": null
+	},
+	"type": "EditPhrase"
+}
